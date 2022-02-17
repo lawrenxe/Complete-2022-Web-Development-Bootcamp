@@ -15,7 +15,8 @@ app.post("/", function(req, res) {
   console.log("Post request received.");
   console.log(query);
 
-  const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=1071141d2b63872d95cc8cbc289cdda8&units=metric";
+ 
+  const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid="+ OPEN_WEATEHR_API_KEY + "8&units=metric";
   https.get(url, function(response) {
     console.log(response.statusCode);
 
